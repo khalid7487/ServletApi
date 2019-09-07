@@ -8,9 +8,45 @@
             <param-value>1.0</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>DemoServletConfig</servlet-name>
+        <servlet-class>servlet.DemoServletConfig</servlet-class>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>system</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>oracle</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>DemoServletContext</servlet-name>
+        <servlet-class>servlet.DemoServletContext</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ShowRequestHeader</servlet-name>
         <url-pattern>/Show_Request_Header</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DemoServletConfig</servlet-name>
+        <url-pattern>/demo_servlet_config</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>dname</param-name>
+        <param-value>sun.jdbc.odbc.jdbcOdbcDriver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>system</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>oracle</param-value>
+    </context-param>
+    <servlet-mapping>
+        <servlet-name>DemoServletContext</servlet-name>
+        <url-pattern>/demo_servlet_context</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
