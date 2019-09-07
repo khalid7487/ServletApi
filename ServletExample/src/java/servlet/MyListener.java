@@ -14,13 +14,11 @@ public class MyListener implements ServletContextListener{
         Connection con=null;
         try {
             con=GetCon.getCon();
-            PreparedStatement ps=con.prepareStatement("CREATE TABLE IF"
-                    + "NOT EXISTS 'fa_uom'("
-                    + " 'uom_id' int(10) unsigned NOT NULL auto_increment,"
-                    + "'uom_name' varchar(45) NOT NULL,"
-                    + "'uom_description' varchar(45) NOT NULL,"
-                    + "PRIMARY KEY ('uom_id'))"
-                    + "ENGINE=InnoDB DEFAULT CHARSET=latin1;");
+            PreparedStatement ps=con.prepareStatement("CREATE TABLE `loginjdbc`.`fa_uom1` (\n" +
+"  `uom_id` INT NOT NULL AUTO_INCREMENT,\n" +
+"  `uom_name` VARCHAR(45) NOT NULL,\n" +
+"  `uom_description` VARCHAR(45) NOT NULL,\n" +
+"  PRIMARY KEY (`uom_id`));");
             ps.executeUpdate();
             ps=con.prepareStatement("INSERT INTO 'fa_uom'('uom_name','uom_description')"
                     + "VALUES(?,?)");
