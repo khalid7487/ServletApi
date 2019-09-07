@@ -38,5 +38,14 @@ Returns an objects of ServletContext.</li>
         <ol><li><b>getServletConfig()</b>method of Servlet interface
 returns the object of ServletConfig.</li></ol>
         <a href="demo_servlet_config">Example</a>
+        
+         <h3>ServletContext Interface</h3>
+         <div>ServletContext is a configuration Object which is created when web application is started. 
+             It contains different initialization parameter that can be configured in web.xml. 
+             The servlet context is an interface which helps to communicate with other servlets</div>
+         <h3>Advantage of ServletContext</h3>
+         Easy to maintain if any information is shared to all the servlet, it is better to make it available for all the servlet.
+         We provide this information from the web.xml
+         <br></br><a href="demo_servlet_context">Example</a>
     </body>
 </html>
